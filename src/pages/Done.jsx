@@ -17,17 +17,17 @@ export default function Done() {
     <S.BossWrapper>
       <S.BigWrapper>
         <S.ContentsWrapper>
-        <h1>Detailed Page</h1>
-          <S.HeaderWrapper>
+        <h1>Done | Detailed Page</h1>
+          <S.DoneHeaderWrapper>
             <h2>{detailedInfo.id}</h2>
-            <S.BackButton onClick={onClickBtn}>
+            <S.DoneBackButton onClick={onClickBtn}>
               Back
-              </S.BackButton>
-          </S.HeaderWrapper>
-          <S.BoddyWrapper>
+              </S.DoneBackButton>
+          </S.DoneHeaderWrapper>
+          <S.DoneBodywrapper>
             <h1>{detailedInfo.title}</h1>
             <h3>{detailedInfo.contents}</h3>
-          </S.BoddyWrapper>
+          </S.DoneBodywrapper>
         </S.ContentsWrapper>
       </S.BigWrapper>
     </S.BossWrapper>

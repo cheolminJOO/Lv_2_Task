@@ -15,7 +15,7 @@ export default function Todo() {
     <S.BossWrapper>
       <S.BigWrapper>
         <S.ContentsWrapper>
-        <h1>Detailed Page</h1>
+        <h1>Todo | Detailed Page</h1>
           <S.HeaderWrapper>
             <h2>{detailedInfo.id}</h2>
             <S.BackButton onClick={onClickBtn}>
