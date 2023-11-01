@@ -8,7 +8,7 @@ export default function TodoAndDoneBtn ({onClickDeleteBtn,onClickDone,onClickCan
     <div>
       {!item.isDone && (
         <div style={WorkBox} key={item.id}>
-            <Link to={`/todo/${item.id}`}>상세보기</Link>
+            <Link onClick={onClickDetailedPage} to={`/todo/${item.id}`}>상세보기</Link>
             <p>{item.title}</p>
             <p>{item.contents}</p>
 
@@ -25,7 +25,7 @@ export default function TodoAndDoneBtn ({onClickDeleteBtn,onClickDone,onClickCan
       {item.isDone && (
         <div style={DoneBox} key={item.id}>
           {/* <Done item ={item}/> */}
-           <Link to={`/done/${item.id}`}>상세보기</Link>
+           <Link onClick={onClickDetailedPage} to={`/done/${item.id}`}>상세보기</Link>
           <p>{item.title}</p>
           <p>{item.contents}</p>
 
