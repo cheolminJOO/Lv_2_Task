@@ -1,6 +1,5 @@
 //Action value
 const CHANGE_TITLE = 'title/CHANGE_TITLE';
-const BLANK_TITLE = 'title/BLANK_TITLE';
 
 //Action creator
 
@@ -10,14 +9,6 @@ export const changeTitle = (newTitle) => {
     payload: newTitle
   }
 }
-
-export const blankTitle = (newTitle) => {
-  return {
-    type: BLANK_TITLE, 
-    payload: newTitle
-  }
-}
-
 
 
 

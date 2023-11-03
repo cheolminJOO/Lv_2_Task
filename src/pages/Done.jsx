@@ -20,9 +20,11 @@ export default function Done() {
         <h1>Done | Detailed Page</h1>
           <S.DoneHeaderWrapper>
             <h2>{detailedInfo.id}</h2>
-            <S.DoneBackButton onClick={onClickBtn}>
+            <S.BackButton color='black' backColor = "red"
+            hoverBackgroundColor ='black' hoverColor = 'red' 
+            onClick={onClickBtn}>
               Back
-              </S.DoneBackButton>
+              </S.BackButton>
           </S.DoneHeaderWrapper>
           <S.DoneBodywrapper>
             <h1>{detailedInfo.title}</h1>

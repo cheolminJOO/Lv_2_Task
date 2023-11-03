@@ -47,25 +47,14 @@ export const DoneHeaderWrapper = styled.div`
 `
 
 export const BackButton = styled.button`
-  background-color: black;
-  color: white;
+  background-color: ${(props) => (props.backColor ? props.backColor : "black")};
+  color: ${(props) => (props.color ? props.color : "red")};
   font-size: large;
   border-radius: 20px;
   cursor: pointer;
   &:hover {
-    color : white;
-    background-color: red;
-  }
-`
-export const DoneBackButton = styled.button`
-  background-color: red;
-  color: black;
-  font-size: large;
-  border-radius: 20px;
-  cursor: pointer;
-  &:hover {
-    color : white;
-    background-color: black;
+    color :${(props) => (props.hoverColor ? props.hoverColor : "white")}; 
+    background-color: ${(props) => (props.hoverBackgroundColor ? props.hoverBackgroundColor : "red")};
   }
 `
 

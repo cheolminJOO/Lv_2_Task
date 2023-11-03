@@ -18,7 +18,9 @@ export default function Todo() {
         <h1>Todo | Detailed Page</h1>
           <S.HeaderWrapper>
             <h2>{detailedInfo.id}</h2>
-            <S.BackButton onClick={onClickBtn}>
+            <S.BackButton color='white' backColor = "black"
+            hoverBackgroundColor ='white' hoverColor = 'black' 
+            onClick={onClickBtn}>
               Back
               </S.BackButton>
           </S.HeaderWrapper>

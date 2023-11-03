@@ -5,6 +5,7 @@ import { addTodo, deleteTodo } from "../redux/modules/todoArr";
 import { addDone, deleteDone } from "../redux/modules/doneArr";
 import { BigWrapperBox, ButtonStyle, DoneWrapperBox, InputStyle, ListWrapper, WorkingWrapperBox, WrapperInput } from "../components/style";
 import TodoAndDoneBtn from "../components/Button";
+import { plusId } from "../redux/modules/counter";
 
 
 
@@ -12,7 +13,8 @@ export default function Home() {
   const Reduxtitle = useSelector((state) => state.titleReducer)
   const toDoArr = useSelector((state) => state.toDoArr.toDoArr);
   const doneArr = useSelector((state) => state.doneArr.doneArr)
-
+  const ReduxCounter = useSelector((state) => state.plusIdReducer)
+  console.log(ReduxCounter)
   const ReduxContents = useSelector((state) => {
     return state.contentsReducer
   } )
@@ -31,11 +33,12 @@ export default function Home() {
  
 
   const onClickAddBtn = () => {
+    dispatch(plusId())
     if(!Reduxtitle.title && !ReduxContents.contents) {
       return alert("제목과 타이틀을 입력하세요")
     }
     const newToDo = {
-      id: toDoArr.length + 1,
+      id: ReduxCounter.counter,
       title : Reduxtitle.title,
       contents : ReduxContents.contents,
       isDone: false,
